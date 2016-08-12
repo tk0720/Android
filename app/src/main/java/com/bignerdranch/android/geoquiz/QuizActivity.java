@@ -28,10 +28,13 @@ public class QuizActivity extends AppCompatActivity {
             new Question(R.string.question_asia, true)
     };
 
+
+//연결 연산자 ::(클래스 연산자), .(함수 안에서 변수 사용시 연결)
+
     private int mCurrentIndex = 0;
 
     private void updateQuestion() {
-        int question = mQuestionBank[mCurrentIndex].getTextResId();
+        int question = mQuestionBank[Math.abs(mCurrentIndex)].getTextResId();
         mQuestionTextView.setText(question);
     }
 
